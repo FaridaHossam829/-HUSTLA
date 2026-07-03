@@ -10,12 +10,14 @@
 <body>
 
 <header>
-
 <div class="logo">
 HUSTLA®
 </div>
 
-<nav>
+<button class="menu-btn">☰</button>
+
+<nav id="nav">
+
 
 <a href="#home">HOME</a>
 
@@ -75,8 +77,6 @@ Premium Streetwear Collection
 <button class="cart-btn">ADD TO CART</button>
 </div>
 
-</div>
-
 <div class="card">
 
 <div class="image"></div>
@@ -101,7 +101,6 @@ Premium Streetwear Collection
 <button class="cart-btn">ADD TO CART</button>
 </div>
 
-</div>
 <div class="card">
 
 <div class="image"></div>
@@ -124,8 +123,6 @@ Premium Streetwear Collection
 <div class="buttons">
 <button class="buy-btn">BUY NOW</button>
 <button class="cart-btn">ADD TO CART</button>
-</div>
-
 </div>
 
 <div class="card">
@@ -152,8 +149,6 @@ Premium Streetwear Collection
 <button class="cart-btn">ADD TO CART</button>
 </div>
 
-</div>
-
 <div class="card">
 
 <div class="image"></div>
@@ -176,8 +171,6 @@ Premium Streetwear Collection
 <div class="buttons">
 <button class="buy-btn">BUY NOW</button>
 <button class="cart-btn">ADD TO CART</button>
-</div>
-
 </div>
 
 </div>
@@ -216,7 +209,7 @@ your@email.com
 +20 123 456 7890
 </a>
 </p>
-
+ 
 </section>
 
 <footer>
@@ -224,6 +217,7 @@ your@email.com
 © 2025 HUSTLA® — ALL RIGHTS RESERVED
 
 </footer>
+
 <script>
 
 let cart = 0;
@@ -270,7 +264,7 @@ document.querySelectorAll(".cart-btn").forEach(button => {
 
 });
 
-// شراء
+ // شراء
 document.querySelectorAll(".buy-btn").forEach(button => {
 
     button.onclick = function () {
@@ -287,7 +281,15 @@ document.querySelectorAll(".buy-btn").forEach(button => {
 
 });
 
+const menuBtn = document.querySelector(".menu-btn");
+const nav = document.getElementById("nav");
+
+menuBtn.onclick = function () {
+    nav.classList.toggle("active");
+};
+ 
 </script>
 
 </body>
 </html>
+ 
