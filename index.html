@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HUSTLA®</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+HUSTLA®
+</div>
+
+<nav>
+
+<a href="#home">HOME</a>
+
+<a href="#products">SHOP</a>
+
+<a href="#about">ABOUT</a>
+
+<a href="#contact">CONTACT</a>
+
+<a href="#" id="cart">
+🛒 <span id="count">0</span>
+</a>
+
+</nav>
+
+</header>
+
+<section class="hero" id="home">
+
+<div class="hero-light"></div>
+
+<img src="logo.png" class="hero-logo" alt="HUSTLA">
+
+<h2>Born Different<br>Stay Different.</h2>
+
+<a href="#products" class="btn">SHOP NOW</a>
+
+</section>
+
+<section class="products" id="products">
+
+<h3>FEATURED COLLECTION</h3>
+
+<div class="cards">
+
+<div class="card">
+
+<div class="image"></div>
+
+<h4>PRODUCT 01</h4>
+
+<p class="price">0 EGP</p>
+
+<p class="description">
+Premium Streetwear Collection
+</p>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+</div>
+
+<div class="buttons">
+<button class="buy-btn">BUY NOW</button>
+<button class="cart-btn">ADD TO CART</button>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="image"></div>
+
+<h4>PRODUCT 02</h4>
+
+<p class="price">0 EGP</p>
+
+<p class="description">
+Premium Streetwear Collection
+</p>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+</div>
+
+<div class="buttons">
+<button class="buy-btn">BUY NOW</button>
+<button class="cart-btn">ADD TO CART</button>
+</div>
+
+</div>
+<div class="card">
+
+<div class="image"></div>
+
+<h4>PRODUCT 03</h4>
+
+<p class="price">0 EGP</p>
+
+<p class="description">
+Premium Streetwear Collection
+</p>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+</div>
+
+<div class="buttons">
+<button class="buy-btn">BUY NOW</button>
+<button class="cart-btn">ADD TO CART</button>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="image"></div>
+
+<h4>PRODUCT 04</h4>
+
+<p class="price">0 EGP</p>
+
+<p class="description">
+Premium Streetwear Collection
+</p>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+</div>
+
+<div class="buttons">
+<button class="buy-btn">BUY NOW</button>
+<button class="cart-btn">ADD TO CART</button>
+</div>
+
+</div>
+
+<div class="card">
+
+<div class="image"></div>
+
+<h4>PRODUCT 05</h4>
+
+<p class="price">0 EGP</p>
+
+<p class="description">
+Premium Streetwear Collection
+</p>
+
+<div class="sizes">
+<button>S</button>
+<button>M</button>
+<button>L</button>
+<button>XL</button>
+</div>
+
+<div class="buttons">
+<button class="buy-btn">BUY NOW</button>
+<button class="cart-btn">ADD TO CART</button>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="about" id="about">
+
+<h2>ABOUT HUSTLA®</h2>
+
+<p>
+HUSTLA® is a modern streetwear brand focused on quality,
+confidence and timeless style.
+</p>
+
+</section>
+
+<section class="contact" id="contact">
+
+<h2>CONTACT</h2>
+
+<p>
+<a href="https://www.instagram.com/its_hustla/" target="_blank">
+Instagram: @its_hustla
+</a>
+</p>
+
+<p>
+<a href="mailto:your@email.com">
+your@email.com
+</a>
+</p>
+
+<p>
+<a href="tel:+201234567890">
++20 123 456 7890
+</a>
+</p>
+
+</section>
+
+<footer>
+
+© 2025 HUSTLA® — ALL RIGHTS RESERVED
+
+</footer>
+<script>
+
+let cart = 0;
+
+const count = document.getElementById("count");
+
+// اختيار المقاس
+document.querySelectorAll(".sizes").forEach(sizeBox => {
+
+    const buttons = sizeBox.querySelectorAll("button");
+
+    buttons.forEach(btn => {
+
+        btn.onclick = function () {
+
+            buttons.forEach(b => b.classList.remove("active"));
+
+            this.classList.add("active");
+
+        };
+
+    });
+
+});
+
+// إضافة إلى السلة
+document.querySelectorAll(".cart-btn").forEach(button => {
+
+    button.onclick = function () {
+
+        cart++;
+
+        count.innerHTML = cart;
+
+        this.innerHTML = "✔ ADDED";
+
+        setTimeout(() => {
+
+            this.innerHTML = "ADD TO CART";
+
+        }, 1000);
+
+    };
+
+});
+
+// شراء
+document.querySelectorAll(".buy-btn").forEach(button => {
+
+    button.onclick = function () {
+
+        this.innerHTML = "✔ BUYING...";
+
+        setTimeout(() => {
+
+            this.innerHTML = "BUY NOW";
+
+        }, 1000);
+
+    };
+
+});
+
+</script>
+
+</body>
+</html>
